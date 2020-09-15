@@ -11,9 +11,17 @@ body {
     margin: 0;
     font-size: 16px;
     background: var(--violet) no-repeat url(../images/bg-mobile.svg);
+
+    @media (min-width: 376px) {
+        background: var(--violet) no-repeat url(../images/bg-desktop.svg);
+        background-size: cover;
+    }
+
 }
 .container {
     width: 80%;
+    max-width: 1273px;
+    height: 100vh;
     margin-left: auto;
     margin-right: auto;
 }
@@ -24,17 +32,25 @@ body {
     }
 }
 .illustration {
+    max-width: 700px;
+    
     img {
         width: 100%;
     }
 }
 .main {
+    max-width: 510px;
     text-align: center;
     color: #fff;
+
     &__title {
         font-family: var(--poppins);
         font-size: 1.5rem;
-        font-weight: 400;
+        font-weight: 700;
+
+        @media (min-width: 510px) {
+            font-size: 2rem;
+        }
     }
     &__paragraph {
         font-family: var(--open-sans);
@@ -73,6 +89,7 @@ body {
 .attribution {
     font-size: 11px;
     text-align: center;
+    margin: 0;
 
     a {
         color: #fff;
